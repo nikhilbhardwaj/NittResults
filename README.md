@@ -1,6 +1,8 @@
 # NittResults
 
-TODO: Write a gem description
+I wrote this gem so that I could check the results of all my classmates in one go.
+It can fetch the result of all the students in the specified range and store the same in a database or
+as individual files, the goal is to wrap it up in an ActiveRecord model for easy access and manipulation.
 
 ## Installation
 

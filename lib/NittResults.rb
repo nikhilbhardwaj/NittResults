@@ -14,6 +14,7 @@ module NittResults
             element.clear
             button = browser.find_element(:id => "Button1")
             element.send_keys(rollno)
+            #TODO : Fix the selection thing that has been introduced recently
             button.click
 
             #get the data and store it in the database
