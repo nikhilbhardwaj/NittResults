@@ -14,4 +14,6 @@ Gem::Specification.new do |gem|
   gem.name          = "NittResults"
   gem.require_paths = ["lib"]
   gem.version       = NittResults::VERSION
+  # Dependencies
+  gem.add_dependency('selenium-webdriver')
 end

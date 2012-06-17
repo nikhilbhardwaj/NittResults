@@ -14,9 +14,12 @@ module NittResults
             element.clear
             button = browser.find_element(:id => "Button1")
             element.send_keys(rollno)
-            #TODO : Fix the selection thing that has been introduced recently
+            # Fixed the selection thing that exists for even semester results
             button.click
-
+	    select = browser.find_element(:id,"Dt1")
+	    select.find_elements(:tag_name, "option").each do |option|
+	      option.click if option.text == "MAY-2012 (REGULAR EXAM)"
+	    end
             #get the data and store it in the database
             #i'm storing in a text files for now
             rows = browser.find_elements(:css => ".DataGridItem, .DataGridAlternatingItem")
