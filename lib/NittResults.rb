@@ -16,9 +16,12 @@ module NittResults
             element.send_keys(rollno)
             # Fixed the selection thing that exists for even semester results
             button.click
-	    select = browser.find_element(:id,"Dt1")
-	    select.find_elements(:tag_name, "option").each do |option|
-	      option.click if option.text == "MAY-2012 (REGULAR EXAM)"
+	    valid_roll_no = browser.find_elements(:id,"Dt1").size
+	    if valid_roll_no > 0
+	      select = browser.find_element(:id,"Dt1")
+	      select.find_elements(:tag_name, "option").each do |option|
+	        option.click if option.text == "MAY-2012 (REGULAR EXAM)"
+	      end
 	    end
             #get the data and store it in the database
             #i'm storing in a text files for now
