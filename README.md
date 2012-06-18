@@ -20,7 +20,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+1. Open irb
+2. require 'NittResults'
+3. include NittResults
+4. self.fetch_results(205110001, 205110088)
+
+Replace the range of roll numbers to match your needs.
 
 ## Contributing
 
@@ -29,3 +34,9 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Future Enhancements
+Instead of creating raw textfiles the results would be stored in a
+database with an ActiveRecord wrapper to easily query and play around
+with.
+
