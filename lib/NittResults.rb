@@ -20,7 +20,7 @@ module NittResults
 	    if valid_roll_no > 0
 	      select = browser.find_element(:id,"Dt1")
 	      select.find_elements(:tag_name, "option").each do |option|
-	        option.click if option.text == "MAY-2012 (REGULAR EXAM)"
+	        option.click if option.text == "NOV-2012 (REGULAR EXAM)"
 	      end
 	    end
             #get the data and store it in the database
